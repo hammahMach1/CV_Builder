@@ -1,0 +1,39 @@
+def generate_cv():
+    name = input("Enter your name: ")
+    email = input("Enter your email: ")
+    phone = input("Enter your phone number: ")
+    address = input("Enter your address: ")
+    summary = input("Enter a brief summary about yourself: ")
+    skills = input("Enter your skills (separated by commas): ")
+    experience = input("Enter your work experience (separated by commas): ")
+    education = input("Enter your education details (separated by commas): ")
+    certifications = input("Enter your certifications (separated by commas): ")
+
+    cv_template = f"""
+    {name}
+    {email} | {phone}
+    {address}
+    
+    Summary
+    {summary}
+    
+    Skills
+    {skills}
+    
+    Experience
+    {experience}
+    
+    Education
+    {education}
+    
+    Certifications
+    {certifications}
+    """
+
+    with open('CV.txt', 'w') as file:
+        file.write(cv_template)
+    
+    print("CV generated and saved as CV.txt")
+
+# Call the function to generate the CV
+generate_cv()
